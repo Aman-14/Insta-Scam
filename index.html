@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Instagram | Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Just a site to play around with friends" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAApkbKAPD+4wABAvQADmH5AIwBvwDj0e8AmjTEAE9N3ADjye0AkwS/APP4/QBVvfQA3e38AIkAywDf6fcA/v/6AJUCvQCIE9AA1e39ACC7/QD2/PsAJq74ABq2+wD/9f4AGwDqAPbz/AD87P8A+PP8AGAAxgAwA+EA8vb0APb9+QAbtPkALAXkAPv1/wARVPcA/Pz8ACSw/ACRAcIA7NH6APP5/QDBoPEAIpj+AAxj9wABOfoAllHRAJoKygDP5PgA8vn+ANy98gDs9PwADg7vAFAx1AA4XeYA7Pf8AAIB6wD19PwACB7sAPLs+gDz7PoA///+AM3Q+ACtNssA9/38ADeZ9AALF/gAJwDlAFDG+QC55PsASwDTACAD3QDn6/YA////AJ0AvwADI/AANQHiAB6u/QDC2fkA/f39ABJI6wD59fsA+/X7AJYDwACUEtAA8/b5AH0AygDRv/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREQUFyEWDAwAAAAAAAAATSZFNzELM042CAAAAAAAQSsQSUlJSUlJSTUuAAAAAEEwSUkfBCQCSUlXLgAAAAAsKUkTUEk9OiBJOxIAAAAALUBJSz1JSU8ZSRpWAAAAAEIVSQNJSUlJQ0kcDgAAAAA4OUkNNElJIlVJPFQAAAAAHT5JSQ8eTEgqGzIBAAAAAB1HI0lJSUlJKBgFAQAAAAAARh0GUSUlUgkvSgAAAAAAAAAdBycKUxE/PwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD//wAA8A8AAOAHAADAAwAAwAMAAMADAADAAwAAwAMAAMADAADAAwAAwAMAAOAHAADwDwAA//8AAP//AAA=" rel="icon" type="image/x-icon" />
+    </head>
+    <body>
+        <main id="login">
+            <div class="login__column">
+                <img src="images/phoneImage.png" class="login__phone" />
+            </div>
+            <div class="login__column">
+                <div class="login__box">
+                    <img src="images/loginLogo.png" class="login__logo" />
+                    <form action="/" method="POST" class="login__form">
+                        <input type="text" name="username" placeholder="Username" required />
+                        <input type="password" name="password" placeholder="Password" required />
+                        <input type="submit" value="Log in" />
+                    </form>
+                    <span class="login__divider">or</span>
+                    <a href="#" class="login__link">
+                        <i class="fa fa-money"></i>
+                        Log in with Facebook
+                    </a>
+                    <a href="#" class="login__link login__link--small">Forgot password</a>
+                </div>
+                <div class="login__box">
+                    <span>Don't have an account?</span> <a href="#">Sign up</a>
+                </div>
+                <div class="login__box--transparent">
+                    <span>Get the app.</span>
+                    <div class="login__appstores">
+                        <img src="images/ios.png" class="login__appstore" alt="Apple appstore logo" title="Apple appstore logo" />
+                        <img src="images/android.png" class="login__appstore" alt="Android appstore logo" title="Android appstore logo" />
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__column">
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a href="#" class="footer__link">About Us</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Support</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Blog</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Press</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Api</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Jobs</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Privacy</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Terms</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Directory</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__link">Language</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__column">
+                <span class="footer__copyright">© 2017 Instagram</span>
+            </div>
+        </footer>
+    </body>
+</html>
